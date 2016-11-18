@@ -37,9 +37,6 @@ register require 'app/chat/ChatPageChatRoom'
 register require 'app/chat/ChatPageCurrentUser'
 register require 'app/chat/ChatPage'
 
-# user
-register (require 'app/CreateUserPage'), 'CreateUserPage'
-
 # member 
 register require 'app/member/MembersIndexPage'
 register (require 'app/member/MembersNewPage'), 'MembersNewPage'
