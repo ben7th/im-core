@@ -13,6 +13,17 @@ class OrganizationNode
   before_destroy :delete_relation
   
 
+  # 用于 controller 中
+  def controller_data
+    {
+      id: self.id.to_s,
+      name: self.name,
+      code: self.code,
+      parents_name:  self.parent?.to_s == "false" ? "无" : self.parent.name,
+      children_name: self.children?.to_s == "false" ? "无" : self.children.map {|x| x.name}.join(","),
+    }
+  end
+
   def save_code
     code = OrganizationNode.count.to_s
     if code.length<5

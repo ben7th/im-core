@@ -1,11 +1,11 @@
 { Table,Button } = antd
 
-module.exports = MembersIndexPage = React.createClass
+module.exports = UsersIndexPage = React.createClass
   render: ->
     columns = [
       {
         title: "用户名"
-        dataIndex: "membername"
+        dataIndex: "name"
       }
       {
         title: "邮箱"
@@ -24,26 +24,23 @@ module.exports = MembersIndexPage = React.createClass
         dataIndex: "id"
         render: (record) =>
           <div>
-            <Button type="primary"><a href="/members/#{record}/edit">编辑</a></Button>
+            <Button type="primary"><a href="/admin/users/#{record}/edit">编辑</a></Button>
             <Button type="primary" data={record} onClick={@delete.bind(this,record)}>删除</Button>
           </div>
       }
     ]
 
-    data = @props.members
-    console.log(data)
+    data = @props.users
 
     <div className='sample-users-table'>
-      <Button type="primary"><a href="/members/new">新增用户</a></Button>
+      <Button type="primary"><a href={@props.new_url}>新增用户</a></Button>
       <Table columns={columns} dataSource={data} pagination={false} size='small' />
     </div>
 
   delete: (data)->
-    delete_url = "/members/#{data}"
-    # DELETE /members/:id
     jQuery.ajax
       type: 'DELETE'
-      url: delete_url
+      url: "/admin/users/#{data}"
     .done (res)->
       console.log(res.message)
 

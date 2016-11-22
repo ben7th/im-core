@@ -1,7 +1,7 @@
 {Tree, Button} = antd
 TreeNode = Tree.TreeNode
 
-module.exports = OrganizationTreeShowPage = React.createClass
+module.exports = TreeShowPage = React.createClass
   make_tree: (data) -> 
     for item in data
       if item.children && item.children.length 
@@ -12,7 +12,7 @@ module.exports = OrganizationTreeShowPage = React.createClass
   render: ->
     data = @props.organizations
     <div>
-       <a className='ant-btn ant-btn-primary' href="/organizations/organization_list">
+       <a className='ant-btn ant-btn-primary' href="/admin/organizations">
         返回表格
       </a>
       <Tree>   

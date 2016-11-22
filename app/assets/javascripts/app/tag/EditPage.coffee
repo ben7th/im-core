@@ -7,41 +7,50 @@ Page = React.createClass
   render: ->
     { getFieldDecorator } = @props.form
     formItemLayout = {
-      labelCol: { span: 8 },
-      wrapperCol: { span: 14 },
+      labelCol: { span: 3 },
     }
     <div className='user-new-page'>
       <div className='user-form'>
         <Form onSubmit={@submit}>
           <FormItem 
             {...formItemLayout}
-            label="机构名"
+            label="TAG名"
           >
-          {getFieldDecorator('OrganizationNode[name]', {initialValue: @props.name})(
-            <Input className="form-input" placeholder="输入机构名" />
+          {getFieldDecorator('Tag[name]', {initialValue: @props.tags.name})(
+            <Input className="form-input" placeholder="请输入 TAG 名" />
           )}
           </FormItem>
 
           <FormItem 
             {...formItemLayout}
-            label="机构编号"
+            label="关联 FAQ"
           >
-          {getFieldDecorator('OrganizationNode[code]', {initialValue: @props.code})(
-            <Input className="form-input" placeholder="输入机构编号" />
-          )}
-          </FormItem>
-
-          <FormItem 
-            {...formItemLayout}
-            label="所属机构"
-          >
-          {getFieldDecorator('OrganizationNode[organizationId]')(
+          {getFieldDecorator('Tag[faq_ids]')(
             <Select
-              placeholder="请选择所属机构"
+              multiple
+              placeholder="请选择或输入关联 FAQ"
               className="form-input"
             >
               {
-                for i in @props.organization_nodes
+                for i in @props.faqs
+                  <Option key={i.id}>{i.question}</Option>
+              }
+            </Select>
+          )}
+          </FormItem>
+
+          <FormItem 
+            {...formItemLayout}
+            label="关联资料"
+          >
+          {getFieldDecorator('Tag[reference_ids]')(
+            <Select
+              multiple
+              placeholder="请选择或输入关联资料"
+              className="form-input"
+            >
+              {
+                for i in @props.references
                   <Option key={i.id}>{i.name}</Option>
               }
             </Select>
@@ -52,9 +61,9 @@ Page = React.createClass
             <Button type="primary" htmlType="submit" className="form-button">
               <FaIcon type='check' /> 确定
             </Button>
-            <Button type="primary" htmlType="submit" className="form-button">
+            <a className='ant-btn ant-btn-primary' href={@props.cancel_url}>
               <FaIcon type='close' /> 取消
-            </Button>
+            </a>
           </FormItem>
 
         </Form>
@@ -63,10 +72,11 @@ Page = React.createClass
 
   submit: (evt)->
     evt.preventDefault()
+    console.log @props.submit_url
     data = @props.form.getFieldsValue()
     jQuery.ajax
-      type: 'POST'
+      type: 'PUT'
       url: @props.submit_url
       data: data
 
-module.exports = CreateOrgnizationPage = Form.create()(Page)
+module.exports = EditPage = Form.create()(Page)

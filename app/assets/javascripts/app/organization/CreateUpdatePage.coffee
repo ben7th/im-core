@@ -7,7 +7,7 @@ Page = React.createClass
   render: ->
     { getFieldDecorator } = @props.form
     formItemLayout = {
-      labelCol: { span: 8 },
+      labelCol: { span: 3 },
       wrapperCol: { span: 14 },
     }
     <div className='user-new-page'>
@@ -17,7 +17,7 @@ Page = React.createClass
             {...formItemLayout}
             label="机构名"
           >
-          {getFieldDecorator('OrganizationNode[name]')(
+          {getFieldDecorator('OrganizationNode[name]', {initialValue: @props.organization.name})(
             <Input className="form-input" placeholder="输入机构名" />
           )}
           </FormItem>
@@ -26,7 +26,7 @@ Page = React.createClass
             {...formItemLayout}
             label="机构编号"
           >
-          {getFieldDecorator('OrganizationNode[code]')(
+          {getFieldDecorator('OrganizationNode[code]', {initialValue: @props.organization.code})(
             <Input className="form-input" placeholder="输入机构编号" />
           )}
           </FormItem>
@@ -35,7 +35,7 @@ Page = React.createClass
             {...formItemLayout}
             label="所属机构"
           >
-          {getFieldDecorator('OrganizationNode[organizationId]')(
+          {getFieldDecorator('OrganizationNode[parent_id]')(
             <Select
               placeholder="请选择所属机构"
               className="form-input"
@@ -52,9 +52,9 @@ Page = React.createClass
             <Button type="primary" htmlType="submit" className="form-button">
               <FaIcon type='check' /> 确定
             </Button>
-            <Button type="primary" htmlType="submit" className="form-button">
+            <a className='ant-btn ant-btn-primary' href={@props.cancel_url}>
               <FaIcon type='close' /> 取消
-            </Button>
+            </a>
           </FormItem>
 
         </Form>
@@ -64,9 +64,15 @@ Page = React.createClass
   submit: (evt)->
     evt.preventDefault()
     data = @props.form.getFieldsValue()
-    jQuery.ajax
-      type: 'POST'
-      url: @props.submit_url
-      data: data
+    if @props.organization.name == null
+      jQuery.ajax
+        type: 'POST'
+        url: @props.submit_url
+        data: data
+    else
+      jQuery.ajax
+        type: 'PUT'
+        url: @props.submit_url
+        data: data
 
-module.exports = CreateOrganizationPage = Form.create()(Page)
+module.exports = CreateUpdatePage = Form.create()(Page)
