@@ -19,7 +19,7 @@ module.exports = TagsIndexPage = React.createClass
         title: "操作"
         dataIndex: "id"
         render: (record) =>
-          <div>
+          <div className="admin-option-tag-a">
             <a className='ant-btn ant-btn-primary' href="/admin/tags/#{record}/edit">
               编辑
             </a>

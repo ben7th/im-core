@@ -1,0 +1,322 @@
+{
+  "question": [{
+    "kind": "multi_choice",
+    "content": "按期限划分，信贷业务可以分为（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "短期信贷业务"
+      }, {
+        "item": "B",
+        "text": "中期信贷业务"
+      }, {
+        "item": "C",
+        "text": "长期信贷业务"
+      }, {
+        "item": "D",
+        "text": "表内信贷业务是指在资产负债表中资产栏可以揭示的业务。以下属于表内信贷业务的有"
+      }],
+      "corrects": ["A", "B", "C"]
+    }
+  },
+  {
+    "kind": "multi_choice",
+    "content": "表内信贷业务是指在资产负债表中资产栏可以揭示的业务。以下属于表内信贷业务的有（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "保证"
+      }, {
+        "item": "B",
+        "text": "商业汇票承兑"
+      }, {
+        "item": "C",
+        "text": "商业汇票贴现"
+      }, {
+        "item": "D",
+        "text": "贷款"
+      }],
+      "corrects": ["C", "D"]
+    }
+  },
+  {
+    "kind": "multi_choice",
+    "content": "表外信贷业务是指在资产负债表附注中反映的业务。以下属于表外信贷业务的有（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "商业汇票承兑"
+      }, {
+        "item": "B",
+        "text": "商业汇票贴现"
+      }, {
+        "item": "C",
+        "text": "保证"
+      }, {
+        "item": "D",
+        "text": "信用证"
+      }],
+      "corrects": ["A", "C", "D"]
+    }
+  },
+  {
+    "kind": "multi_choice",
+    "content": "按资金来源划分，信贷业务可以分为（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "信贷资金贷款"
+      }, {
+        "item": "B",
+        "text": "委托贷款"
+      }, {
+        "item": "C",
+        "text": "联合贷款"
+      }, {
+        "item": "D",
+        "text": "境外筹资转贷款"
+      }],
+      "corrects": ["A", "B", "D"]
+    }
+  },
+  {
+    "kind": "multi_choice",
+    "content": "建设银行信贷业务的服务渠道包括（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "客户经理"
+      }, {
+        "item": "B",
+        "text": "电子银行渠道"
+      }, {
+        "item": "C",
+        "text": "网点渠道"
+      }, {
+        "item": "D",
+        "text": "贷款审批人"
+      }],
+      "corrects": ["A", "B", "C"]
+    }
+  },
+  {
+    "kind": "multi_choice",
+    "content": "办理信贷业务必须遵循“三性”原则，“三性”原则包括（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "时效性"
+      }, {
+        "item": "B",
+        "text": "安全性"
+      }, {
+        "item": "C",
+        "text": "流动性"
+      }, {
+        "item": "D",
+        "text": "效益性"
+      }],
+      "corrects": ["B", "C", "D"]
+    }
+  },
+  {
+    "kind": "multi_choice",
+    "content": "信贷文化是银行在长期信贷工作实践中形成和积淀下来并不断更新的（  ）与行为规范的总称",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "信贷理念"
+      }, {
+        "item": "B",
+        "text": "价值取向 "
+      }, {
+        "item": "C",
+        "text": "信贷原则"
+      }, {
+        "item": "D",
+        "text": "管理制度"
+      }],
+      "corrects": ["A", "B", "C", "D"]
+    }
+  },
+  {
+    "kind": "multi_choice",
+    "content": "我行信贷文化核心理念除了诚实守信理念、审慎经营理念、资本经营理念、风险管理理念以外，还包括（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "以市场为导向理念"
+      }, {
+        "item": "B",
+        "text": "以客户为中心理念 "
+      }, {
+        "item": "C",
+        "text": "金融创新理念"
+      }, {
+        "item": "D",
+        "text": "绿色信贷理念"
+      }],
+      "corrects": ["B", "C", "D"]
+    }
+  },
+  {
+    "kind": "multi_choice",
+    "content": "信贷文化建设的主要内容除了建设信贷经营文化、信贷服务文化以外，还包括（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "信贷合规文化"
+      }, {
+        "item": "B",
+        "text": "信贷风险管控文化 "
+      }, {
+        "item": "C",
+        "text": "信贷廉政文化"
+      }, {
+        "item": "D",
+        "text": "打造符合建设银行发展要求的信贷队伍"
+      }],
+      "corrects": ["A", "B", "C", "D"]
+    }
+  },
+  {
+    "kind": "multi_choice",
+    "content": "信贷业务的金额是指银行向客户提供的（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "综合授信额度"
+      }, {
+        "item": "B",
+        "text": "信用额度 "
+      }, {
+        "item": "C",
+        "text": "贷款利率"
+      }, {
+        "item": "D",
+        "text": "单笔信贷业务数额"
+      }],
+      "corrects": ["A", "B", "D"]
+    }
+  },
+  {
+    "kind": "multi_choice",
+    "content": "信贷业务对公客户可以分为（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "机构客户"
+      }, {
+        "item": "B",
+        "text": "小企业客户"
+      }, {
+        "item": "C",
+        "text": "大中型公司客户"
+      }, {
+        "item": "D",
+        "text": "个人客户"
+      }],
+      "corrects": ["A", "B", "C"]
+    }
+  },
+  {
+    "kind": "multi_choice",
+    "content": "信贷业务服务渠道中电子渠道包括（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "网上银行"
+      }, {
+        "item": "B",
+        "text": "电话银行"
+      }, {
+        "item": "C",
+        "text": "手机银行"
+      }, {
+        "item": "D",
+        "text": "其他电子终端"
+      }],
+      "corrects": ["A", "B", "C", "D"]
+    }
+  },
+  {
+    "kind": "multi_choice",
+    "content": "下列选项中属于固定资产贷款的有（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "工商业流动资金贷款"
+      }, {
+        "item": "B",
+        "text": "基本建设贷款"
+      }, {
+        "item": "C",
+        "text": "技术改造贷款"
+      }, {
+        "item": "D",
+        "text": "房地产开发贷款"
+      }],
+      "corrects": ["B", "C", "D"]
+    }
+  },
+  {
+    "kind": "multi_choice",
+    "content": "对公大中型公司机构类客户包括（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "企事业法人"
+      }, {
+        "item": "B",
+        "text": "兼具经营和管理职能的政府机构"
+      }, {
+        "item": "C",
+        "text": "金融同业"
+      }, {
+        "item": "D",
+        "text": "其他经济组织"
+      }],
+      "corrects": ["A", "B", "C", "D"]
+    }
+  },
+  {
+    "kind": "multi_choice",
+    "content": "信贷业务服务渠道中网点渠道包括（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "综合性支行及以上机构的本部营业部"
+      }, {
+        "item": "B",
+        "text": "单点型支行"
+      }, {
+        "item": "C",
+        "text": "网点型支行"
+      }, {
+        "item": "D",
+        "text": "分理处和储蓄所"
+      }],
+      "corrects": ["A", "B", "C", "D"]
+    }
+  },
+  {
+    "kind": "multi_choice",
+    "content": "绿色信贷包括对（  ）的支持，防范环境和社会风险，提升自身的环境和社会表现等基本内容",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "绿色经济"
+      }, {
+        "item": "B",
+        "text": "低碳经济"
+      }, {
+        "item": "C",
+        "text": "循环经济"
+      }, {
+        "item": "D",
+        "text": "高效经济"
+      }],
+      "corrects": ["A", "B", "C", "D"]
+    }
+  }]
+}

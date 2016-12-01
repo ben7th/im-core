@@ -45,7 +45,9 @@ module.exports = UsersIndexPage = React.createClass
 
 
     <div className='sample-users-table'>
-      <Button type="primary"><a href={@props.new_url}>新增用户</a></Button>
+      <div className="admin-tag-a">
+        <a className='ant-btn ant-btn-primary' href={@props.new_url}>新增用户</a>
+      </div>
       <Table columns={columns} dataSource={data} pagination={false} size='small' />
     </div>
 

@@ -1,0 +1,91 @@
+{
+  "question": [{
+    "kind": "bool",
+    "content": "信贷是银行利用自身实力和信誉为客户提供资金融通或代客户承担债务，并以客户支付利息、费用和偿还本金或最终承担债务为条件的一种经营行为",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "按会计核算的归属划分，信贷业务可以分为表内信贷业务和表外信贷业务",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "短期信贷业务期限在180天以内（含180天）",
+    "answer": false
+  },{
+    "kind": "bool",
+    "content": "担保是指保证借款人还款或履行责任的第二来源",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "按授信对象划分，对公信贷业务可以分为机构类信贷业务、公司类信贷业务和个人信贷业务",
+    "answer": false
+  },{
+    "kind": "bool",
+    "content": "信贷业务要素中，金额是指银行向客户提供的综合授信额度、信用额度或单笔信贷业务数额",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "按币种划分，信贷业务可分为本币信贷业务和外币信贷业务",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "按组织形式划分，信贷业务可分为普通贷款和银团贷款两大类",
+    "answer": false
+  },{
+    "kind": "bool",
+    "content": "信贷业务一般包括对象、金额、期限、价格、用途、担保六个基本要素",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "对公信贷客户分为大中型公司机构类客户、小企业客户和个人客户三类",
+    "answer": false
+  },{
+    "kind": "bool",
+    "content": "按偿还方式划分，信贷业务可分为一次性偿还信贷业务和分期偿还信贷业务",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "中期信贷业务期限在1年到10年之间（含10年）",
+    "answer": false
+  },{
+    "kind": "bool",
+    "content": "合规经营是保证银行实现有效发展的基石，是防范信贷风险的重要防线。因此，要加强信贷合规文化建设",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "长期信贷业务期限在10年以上",
+    "answer": false
+  },{
+    "kind": "bool",
+    "content": "信贷业务要素中，期限是指信贷业务的期限或银行承担债务的期限",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "信贷业务中，价格是指贷款利率",
+    "answer": false
+  },{
+    "kind": "bool",
+    "content": "信贷业务要素中，用途是指借款人办理业务后信贷资金的具体去向",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "绿色信贷应包括对绿色经济、低碳经济、循环经济的支持，防范环境及社会风险，提升自身的环境和社会表现等基本内容",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "办理信贷业务必须遵循的安全性原则，指的是银行在经营信贷业务过程中，要保证信贷资金的“保值”，避免承受过高风险和造成损失",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "信贷业务效益性指银行在经营活动中只追求最大经济效益",
+    "answer": false
+  },{
+    "kind": "bool",
+    "content": "客户是银行一切价值创造的来源，优质服务是银行赢得客户的关键。因此，要加强信贷服务文化建设",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "大中型公司类机构客户，包括企事业法人、兼具经营和管理职能的政府机构、金融同业、小企业客户、其他经济组织等",
+    "answer": false
+  }]
+}

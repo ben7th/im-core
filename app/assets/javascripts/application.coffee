@@ -1,6 +1,7 @@
 #= require libs
 #= require react-adapter
 #= require antd-adapter
+#= require file_part_upload/uploader 
 
 # utils
 require 'utils/_index'
@@ -9,6 +10,9 @@ require 'utils/_index'
 require 'layouts/_index'
 
 # -----------------------------
+
+
+
 
 # app components
 window.AppComponents = {}
@@ -51,3 +55,18 @@ register require 'app/admin/reference/ReferencesIndexPage'
 # 标签
 register (require 'app/admin/tag/EditPage'), 'EditPage'
 register require 'app/admin/tag/TagsIndexPage'
+
+
+#admin/index
+register require 'app/admin/AdminIndexPage'
+
+# 测试题管理  
+register require 'app/admin/question/QuestionIndexPage'
+register (require 'app/admin/question/SingleEditPage'), 'SingleEditPage'
+register (require 'app/admin/question/MultiEditPage'), 'MultiEditPage'
+register (require 'app/admin/question/BoolEditPage'), 'BoolEditPage'
+
+# 保存文件
+register require 'app/admin/save_file/UploadPage'
+register require 'app/admin/save_file/IndexSaveFilePage'
+register (require 'app/admin/save_file/EditSaveFilePage'), 'EditSaveFilePage'

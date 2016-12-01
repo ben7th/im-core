@@ -24,7 +24,7 @@ module.exports = ListPage = React.createClass
         title: "操作"
         dataIndex: "id"
         render: (record) =>
-          <div>
+          <div className="admin-option-tag-a">
             <a className='ant-btn ant-btn-primary' href="/admin/organizations/#{record}/edit">
               编辑
             </a>
@@ -49,12 +49,14 @@ module.exports = ListPage = React.createClass
       })
 
     <div> 
-      <a className='ant-btn ant-btn-primary' href="/admin/organizations/new">
-        新增机构
-      </a>
-      <a className='ant-btn ant-btn-primary' href="/admin/organizations/tree_show">
-        查看树状结构
-      </a>
+      <div className="admin-tag-a">
+        <a className='ant-btn ant-btn-primary' href="/admin/organizations/new">
+          新增机构
+        </a>
+        <a className='ant-btn ant-btn-primary' href="/admin/organizations/tree_show">
+          查看树状结构
+        </a>
+      </div>
       <Table columns={columns} dataSource={datas} pagination={false}/>
     </div>
 
