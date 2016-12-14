@@ -1,4 +1,6 @@
 class Admin::UsersController < ApplicationController
+  include SessionsHelper
+
   def index
     @component_name = 'UsersIndexPage'
     @component_data = {
@@ -55,11 +57,53 @@ class Admin::UsersController < ApplicationController
     end
   end
 
+  # 
+  def update_user
+    current_user.password = params[:password]
+    current_user.member.name = params[:name]
+
+    if current_user.save && current_user.member.save
+     # 考虑验证错误时的报错信息
+     render :json => {:status_code => "200" }
+    end
+  
+  end
+
+  def get_user_detail
+    render json: {
+      password: current_user.password,
+      email: current_user.email,
+      name: current_user.member.name,
+      organizations: current_user.member.organization_nodes.map{|organization| organization.name}
+    }
+  end
+
   def destroy
     member = Member.find(params[:id])
     member.user.destroy
     member.destroy
     redirect_to admin_users_path
+  end
+
+  # android 登录验证
+  def do_sign_in
+    user = User.where(email: params[:email])
+    if user.present? 
+      if user.first.valid_password?(params[:password])
+        sign_in user.first
+        render json: {valid_info: "successfully" ,id: user.first.id.to_s}
+      else
+        render json: {valid_info: "密码错误 !"}
+      end
+    else
+      render json: {valid_info: "用户不存在 !"}
+    end
+   
+  end
+
+  def do_sign_out
+    sign_out current_user
+    render json: {status_code: "200"}
   end
 
   private

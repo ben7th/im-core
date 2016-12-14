@@ -17,12 +17,23 @@ Rails.application.routes.draw do
   root to: 'index#index'
   
   namespace :admin do
-    resources :users
+    resources :users do
+      post :do_sign_in, on: :collection
+      post :do_sign_out, on: :collection
+      post :update_user, on: :collection
+      get :get_user_detail, on: :collection
+    end
     resources :organizations do
       get :tree_show, on: :collection
     end
-    resources :faqs
-    resources :references
+    resources :faqs do 
+      get :get_faq_detail, on: :collection
+    end
+
+    resources :references do
+      get :get_ref_detail, on: :collection
+    end
+
     resources :tags
     resources :questions do
       get :multi_new, on: :collection

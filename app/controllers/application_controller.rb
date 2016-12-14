@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-
+  
   def default_render
     if @component_name.present?
       @component_name = @component_name.camelize
