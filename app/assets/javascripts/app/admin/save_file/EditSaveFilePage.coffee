@@ -6,7 +6,21 @@ Option = Select.Option
 Page = React.createClass
   componentWillMount: ->
     if @props.msg
-      message.info(@props.msg)
+      message.info(@props.msg)  
+
+  check_uniq: (rule, value, callback)-> 
+
+    if value == ""
+       callback('不为空')
+    else
+      params = {"name" : value ,"id":@props.save_file.id}
+      jQuery.ajax
+        type: 'POST'
+        url: "/admin/files/antd_check_uniq"
+        data: params 
+      .success (msg) =>
+        if msg["msg"] != "成功"
+          callback(msg["msg"])
 
   render: ->
     { getFieldDecorator } = @props.form
@@ -32,9 +46,23 @@ Page = React.createClass
             {...formItemLayout}
             label="自定义文件名"
           >
-          {getFieldDecorator('SaveFile[name]', { initialValue: @props.save_file.name}           
+          {getFieldDecorator('SaveFile[name]',{
+            rules: [{
+              validator: this.check_uniq,
+            }],
+            initialValue: @props.save_file.name}           
           )(
             <Input className="form-input" placeholder="请输入自定义文件名" />
+          )}
+          </FormItem>
+
+          <FormItem 
+            {...formItemLayout}
+          >
+          {getFieldDecorator('SaveFile[file_entity_id]',{
+            initialValue: @props.file_entity_id.$oid}           
+          )(
+            <Input style={{display:"none"}}/>
           )}
           </FormItem>
 
@@ -72,11 +100,20 @@ Page = React.createClass
 
   submit:(evt)->
     evt.preventDefault()
-    form_data = @props.form.getFieldsValue()
-    jQuery.ajax
-        type: 'PUT'
-        url: @props.update_path
-        data: form_data
+    
+    if @props.type == "update"
+      form_data = @props.form.getFieldsValue()
+      jQuery.ajax
+          type: 'PUT'
+          url: @props.update_path
+          data: form_data
+    else
+      form_data = @props.form.getFieldsValue()
+      console.log form_data
+      jQuery.ajax
+          type: 'POST'
+          url: @props.create_path
+          data: form_data
 
 
 module.exports = EditSaveFilePage = Form.create()(Page)

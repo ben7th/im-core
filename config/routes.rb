@@ -32,6 +32,7 @@ Rails.application.routes.draw do
 
     resources :references do
       get :get_ref_detail, on: :collection
+      get :fetch_ref_file, on: :collection
     end
 
     resources :tags
@@ -40,7 +41,10 @@ Rails.application.routes.draw do
       get :bool_new, on: :collection
     end
     resources :save_files, path: 'files' do
-      get :upload, on: :collection
+      get  :upload, on: :collection
+      post :antd_check_uniq, on: :collection
+      post :antd_check_name_present, on: :collection
+
     end
   end
 

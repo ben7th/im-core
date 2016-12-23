@@ -27,8 +27,8 @@ class AdminController < ApplicationController
         path: admin_questions_path,
       },
       file: {
-        count: '1',
-        path: '#',
+        count: SaveFile.count,
+        path: admin_save_files_path,
       },
     }
   end

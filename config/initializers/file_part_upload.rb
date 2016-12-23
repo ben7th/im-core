@@ -22,4 +22,32 @@ FilePartUpload.config do
   # 所以这里需要配置 App-Server Host,并且可以被公网访问
   qiniu_callback_host  "http://yy.yy.yy"
 
+  qiniu_audio_and_video_transcode :enable
+
+  qiniu_pfop_pipeline "AlansVideo"
+
+
+
+  qiniu_video_transcode_params([
+    {
+      # 如果定义的档位不具体指定分辨率和视频码率，这样就会使用原视频参数
+      name: "原画",
+      audio_bit_rate: 32000
+    },
+    {
+      name: "标清",
+      video_width:    640,
+      video_height:   360,
+      video_bit_rate: 230400,
+      audio_bit_rate: 32000
+    },
+    {
+      name: "高清",
+      video_width: 960,
+      video_height: 540,
+      video_bit_rate: 518400,
+      audio_bit_rate: 32000
+    }
+  ])
+
 end

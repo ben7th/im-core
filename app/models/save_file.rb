@@ -8,10 +8,20 @@ class SaveFile
   has_and_belongs_to_many :tags
   before_save :set_tag_ids
 
-  def controller_data
+  validates :name, presence: true
+  validates :name, uniqueness: true
+  def new_controller_data
     {
-     :file_entity_name=> self.file_entity.original,
-     :file_entity_type=> self.file_entity.mime,
+     :name => self.name,
+     :tags_name_ary => self.tags.map{|tag| tag.name}.to_a,
+     :id => self.id.to_s
+    }
+  end
+
+  def index_controller_data
+    {
+     :file_entity_name =>self.file_entity.original,
+     :file_entity_type =>self.file_entity.mime,
      :name => self.name,
      :tags_name_ary => self.tags.map{|tag| tag.name}.to_a,
      :id => self.id.to_s

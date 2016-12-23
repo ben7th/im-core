@@ -79,6 +79,20 @@ Page = React.createClass
           )}
           </FormItem>
 
+          <FormItem 
+            {...formItemLayout}
+            label="引用文件"
+          >
+          {getFieldDecorator('References[reference_file_name]', {
+            rules: [{
+              validator: this.check_present,
+            }],
+            initialValue: @props.references.reference_file_name
+          })(
+            <Input className="form-input" placeholder="输入引用文件名" />
+          )}
+          </FormItem>
+
           <FormItem>
             <Button type="primary" htmlType="submit" className="form-button">
               <FaIcon type='check' /> 确定
@@ -91,6 +105,17 @@ Page = React.createClass
         </Form>
       </div>
     </div>
+
+  check_present: (rule, value, callback)-> 
+
+    params = {"name" : value}
+    jQuery.ajax
+      type: 'POST'
+      url: "/admin/files/antd_check_name_present"
+      data: params 
+    .success (msg) =>
+      if msg["msg"] != "成功"
+        callback(msg["msg"])
 
   submit: (evt)->
     evt.preventDefault()
