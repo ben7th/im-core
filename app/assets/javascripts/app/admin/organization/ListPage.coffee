@@ -24,7 +24,7 @@ module.exports = ListPage = React.createClass
         title: "操作"
         dataIndex: "id"
         render: (record) =>
-          <div>
+          <div className="admin-option-tag-a">
             <a className='ant-btn ant-btn-primary' href="/admin/organizations/#{record}/edit">
               编辑
             </a>
@@ -34,15 +34,29 @@ module.exports = ListPage = React.createClass
           </div>
       }
     ]
-    datas = @props.organization
+    datas = []
+    for org in  @props.organization
+      down_org_s = ''
+      for c in org.children_name
+        down_org_s += "#{c}，"
+
+      datas.push({
+        name: org.name,
+        code: org.code,
+        parents_name: org.parents_name,
+        children_name: down_org_s.substring(0, down_org_s.length - 1),
+        id: org.id
+      })
 
     <div> 
-      <a className='ant-btn ant-btn-primary' href="/admin/organizations/new">
-        新增机构
-      </a>
-      <a className='ant-btn ant-btn-primary' href="/admin/organizations/tree_show">
-        查看树状结构
-      </a>
+      <div className="admin-tag-a">
+        <a className='ant-btn ant-btn-primary' href="/admin/organizations/new">
+          新增机构
+        </a>
+        <a className='ant-btn ant-btn-primary' href="/admin/organizations/tree_show">
+          查看树状结构
+        </a>
+      </div>
       <Table columns={columns} dataSource={datas} pagination={false}/>
     </div>
 

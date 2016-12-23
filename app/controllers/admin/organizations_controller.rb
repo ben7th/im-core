@@ -7,7 +7,9 @@ class Admin::OrganizationsController < ApplicationController
       organization: organization.controller_data,
       submit_url: admin_organizations_path(organization),
       cancel_url: admin_organizations_path,
-      organization_nodes: OrganizationNode.all.map { |node| node.controller_data }
+      organization_nodes: OrganizationNode.all.map { |node| 
+        node.controller_data 
+      }
     }
   end
 
@@ -25,7 +27,9 @@ class Admin::OrganizationsController < ApplicationController
   def index
     @component_name = 'ListPage'
     @component_data = {
-      organization: OrganizationNode.all.map { |organization|  organization.controller_data }
+      organization: OrganizationNode.all.map { |organization|  
+        organization.controller_data 
+      }
     }
   end
 
@@ -37,7 +41,9 @@ class Admin::OrganizationsController < ApplicationController
       organization: organization.controller_data,
       submit_url: admin_organization_path(organization),
       cancel_url: admin_organizations_path,
-      organization_nodes: OrganizationNode.all.map { |node| node.controller_data }
+      organization_nodes: OrganizationNode.all.map { |node| 
+        node.controller_data 
+      }
     }
   end
 
@@ -63,7 +69,9 @@ class Admin::OrganizationsController < ApplicationController
     # 展现组织树状图
     @component_name = 'TreeShowPage'
     @component_data = {
-      organizations:  OrganizationNode.where(depth:"0").all.to_a.map{|x| x.tree_data}
+      organizations:  OrganizationNode.where(depth:"0").all.to_a.map{ |x| 
+        x.tree_data
+      }
     } 
   end
 

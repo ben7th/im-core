@@ -90,7 +90,7 @@ gem 'mongoid-tree', "~> 2.1.0", :require => 'mongoid/tree'
 
 gem 'enumerize', "~> 2.0"
 ### 以下是部署相关
-gem "rest-client", "2.0.0"
+gem "rest-client", "1.7.3"
 
 group :development do
   gem "mina", "0.3.7"
@@ -105,3 +105,16 @@ group :production do
   gem 'sidekiq', '~> 4.2'
   gem 'unicorn', '~> 5.1'
 end
+
+gem 'file-part-upload',
+  :github => "blackdust/file-part-upload",
+  :ref    => "4e8385dc4e19c31f04b66b297b160ad88eb273d3"
+
+# gem 'file-part-upload',
+#   :path => "../file-part-upload"
+
+
+
+
+
+

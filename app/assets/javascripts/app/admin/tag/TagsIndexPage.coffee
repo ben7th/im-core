@@ -19,7 +19,7 @@ module.exports = TagsIndexPage = React.createClass
         title: "操作"
         dataIndex: "id"
         render: (record) =>
-          <div>
+          <div className="admin-option-tag-a">
             <a className='ant-btn ant-btn-primary' href="/admin/tags/#{record}/edit">
               编辑
             </a>
@@ -29,8 +29,22 @@ module.exports = TagsIndexPage = React.createClass
           </div>
       }
     ]
+    data = []
+    for i in @props.tags
+      faq_s = ''
+      ref_s = ''
+      for j in i.faqs
+        faq_s += "#{j.question},"
 
-    data = @props.tags
+      for k in i.references
+        ref_s += "#{k.name},"
+
+      data.push({
+        name: i.name,
+        faqs: faq_s.substring(0, faq_s.length-1),
+        references: ref_s.substring(0, ref_s.length-1),
+        id: i.id
+      })
 
 
     <div className='sample-tags-table'>

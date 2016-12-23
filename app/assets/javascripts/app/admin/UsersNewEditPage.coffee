@@ -5,6 +5,10 @@ Option = Select.Option
 
 Page = React.createClass
   render: ->
+    org_node_ary = []
+    for org in @props.user_data.organization_nodes
+      org_node_ary.push(org.id)
+
     { getFieldDecorator } = @props.form
     formItemLayout = {
       labelCol: { span: 8 },
@@ -17,7 +21,12 @@ Page = React.createClass
             {...formItemLayout}
             label="用户名"
           >
-          {getFieldDecorator('member[name]', {initialValue: @props.user_data.name})(
+          {getFieldDecorator('member[name]', {
+            rules: [{
+              required: true, message: '请输入用户名',
+            }],
+            initialValue: @props.user_data.name
+          })(
             <Input className="form-input" placeholder="输入用户名" />
           )}
           </FormItem>
@@ -26,7 +35,12 @@ Page = React.createClass
             {...formItemLayout}
             label="邮箱"
           >
-          {getFieldDecorator('user[email]',{initialValue: @props.user_data.email})(
+          {getFieldDecorator('user[email]',{
+            rules: [{
+              required: true, message: '请输入邮箱',
+            }],
+            initialValue: @props.user_data.email
+          })(
             <Input className="form-input" placeholder="输入邮箱" />
           )}
           </FormItem>
@@ -35,7 +49,12 @@ Page = React.createClass
             {...formItemLayout}
             label="工号"
           >
-          {getFieldDecorator('member[job_number]',{initialValue: @props.user_data.job_number})(
+          {getFieldDecorator('member[job_number]',{
+            rules: [{
+              required: true, message: '请输入工号',
+            }],
+            initialValue: @props.user_data.job_number
+          })(
             <Input className="form-input" placeholder="输入工号" />
           )}
           </FormItem>
@@ -44,17 +63,15 @@ Page = React.createClass
             {...formItemLayout}
             label="所属机构"
           >
-          {getFieldDecorator('member[organization_node_ids]')(
+          {getFieldDecorator('member[organization_node_ids]',{initialValue: org_node_ary})(
             <Select
-              multiple
               tags
               placeholder="请选择所属机构"
               className="form-input"
-              onChange = {@test}
             >
               {
                 for i in [0..@props.organization_nodes.length - 1]
-                  <Option key={@props.organization_nodes[i].name}>{@props.organization_nodes[i].name}</Option>
+                  <Option key={@props.organization_nodes[i].id}>{@props.organization_nodes[i].name}</Option>
               }
             </Select>
           )}
@@ -64,7 +81,11 @@ Page = React.createClass
             {...formItemLayout}
             label="密码"
           >
-          {getFieldDecorator('user[password]')(
+          {getFieldDecorator('user[password]',{
+            rules: [{
+              required: true, message: '请输入密码',
+            }]
+          })(
             <Input className="form-input" placeholder="输入密码" />
           )}
           </FormItem>
@@ -82,16 +103,16 @@ Page = React.createClass
       </div>
     </div>
 
-
-  test: (value)->
-    # 1 取到页面加载初始option时的数组
-    # 2 value.last 是否包含在那个数组里 如果不包含则
-    console.log value
-
-
   submit: (evt)->
     evt.preventDefault()
+    this.props.form.validateFields (err, values)->
+      if !err
+        console.log('Received values of form: ', values)
+        
     data = @props.form.getFieldsValue()
+    if data["member[organization_node_ids]"].length == 0
+      data["member[organization_node_ids]"] = [""]
+
     if @props.user_data.name == null
       method = 'POST'
     else

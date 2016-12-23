@@ -8,59 +8,51 @@ Page = React.createClass
     { getFieldDecorator } = @props.form
     formItemLayout = {
       labelCol: { span: 3 },
+      wrapperCol: { span: 14 },
     }
     <div className='user-new-page'>
       <div className='user-form'>
         <Form onSubmit={@submit}>
           <FormItem 
             {...formItemLayout}
-            label="问题"
+            label="机构名"
           >
-          {getFieldDecorator('Faq[question]', {initialValue: @props.faqs.question})(
-            <Input className="form-textarea" placeholder="输入问题" type="textarea" rows={6}/>
+          {getFieldDecorator('OrganizationNode[name]', {
+            rules: [{
+              required: true, message: '请输入机构名',
+            }],
+            initialValue: @props.organization.name
+          })(
+            <Input className="form-input" placeholder="输入机构名" />
           )}
           </FormItem>
 
           <FormItem 
             {...formItemLayout}
-            label="解答"
+            label="机构编号"
           >
-          {getFieldDecorator('Faq[answer]', {initialValue: @props.faqs.answer})(
-            <Input className="form-textarea" placeholder="输入答案" type="textarea" rows={6} />
+          {getFieldDecorator('OrganizationNode[code]', {
+            rules: [{
+              required: true, message: '请输入机构编号',
+            }],
+            initialValue: @props.organization.code
+          })(
+            <Input className="form-input" placeholder="输入机构编号" />
           )}
           </FormItem>
 
           <FormItem 
             {...formItemLayout}
-            label="参考资料"
+            label="所属机构"
           >
-          {getFieldDecorator('Faq[reference_ids]')(
+          {getFieldDecorator('OrganizationNode[parent_id]', {initialValue: @props.organization.parents_id})(
             <Select
-              multiple
-              placeholder="请选择或输入参考资料"
+              placeholder="请选择所属机构"
               className="form-input"
             >
               {
-                for i in @props.references
+                for i in @props.organization_nodes
                   <Option key={i.id}>{i.name}</Option>
-              }
-            </Select>
-          )}
-          </FormItem>
-
-          <FormItem 
-            {...formItemLayout}
-            label="关键词"
-          >
-          {getFieldDecorator('Faq[tags_name]')(
-            <Select
-              tags
-              placeholder="请选择或输入关键词"
-              className="form-input"
-            >
-              {
-                for i in @props.tags
-                  <Option key={i.name}>{i.name}</Option>
               }
             </Select>
           )}
@@ -81,8 +73,12 @@ Page = React.createClass
 
   submit: (evt)->
     evt.preventDefault()
+    this.props.form.validateFields (err, values)->
+      if !err
+        console.log('Received values of form: ', values)
+        
     data = @props.form.getFieldsValue()
-    if @props.faqs.question == null
+    if @props.organization.name == null
       jQuery.ajax
         type: 'POST'
         url: @props.submit_url
@@ -93,4 +89,4 @@ Page = React.createClass
         url: @props.submit_url
         data: data
 
-module.exports = NewAndEditPage = Form.create()(Page)
+module.exports = CreateUpdatePage = Form.create()(Page)

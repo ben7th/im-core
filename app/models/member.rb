@@ -5,6 +5,8 @@ class Member
   field :name, type: String
   field :job_number, type: String
 
+  validates :name, :job_number, presence: true
+
   has_and_belongs_to_many :organization_nodes
   belongs_to :user
 
@@ -18,7 +20,7 @@ class Member
                 self.user.email
               end,
       job_number: self.job_number,
-      organization_nodes: self.organization_nodes.map {|x| x.name}.join(","),
+      organization_nodes: self.organization_nodes.map {|x| x.controller_data},
     }
   end
 end

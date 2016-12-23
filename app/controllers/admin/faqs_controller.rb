@@ -56,6 +56,25 @@ class Admin::FaqsController < ApplicationController
     redirect_to admin_faqs_path
   end
 
+  # android 获取参考资料
+  def get_faq_detail
+    faqs = Faq.all
+    faq_ary = []
+    faqs.each do |faq|
+      tags_str = ''
+      faq.tags.each do |tag|
+        tags_str += '#' + tag.name + ' '
+      end
+      faq_ary.push({
+        question: faq.question,
+        tags: tags_str,
+      })
+    end
+    render json: {
+      faqs: faq_ary,
+    }
+  end
+
   private 
    def faq_params
      params.require(:Faq).permit(:question, :answer, :tags_name => [], :reference_ids => [])

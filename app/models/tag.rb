@@ -5,6 +5,8 @@ class Tag
   field :name, type: String
   before_destroy :cancel_all_reletion
 
+  validates :name, presence: true
+
   def cancel_all_reletion
     self.refs.each do |ref|
       ref.tag_ids -= [self.id]
@@ -62,11 +64,19 @@ class Tag
       id: self.id.to_s,
       name: self.name,
       faqs: self.faqs.map{ |faq|
-        faq.question
-      }.join(","),
+        faq.simple_controller_data
+      },
+
       references: self.refs.map{|ref|
-        ref.name
-      }.join(",")
+        ref.simple_controller_data
+      }
+    }
+  end
+
+  def simple_controller_data
+    {
+      id: self.id.to_s,
+      name: self.name
     }
   end
 end

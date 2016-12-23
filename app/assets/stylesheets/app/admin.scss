@@ -1,0 +1,56 @@
+// 新增用户界面(CreateUserPage.coffee)
+.user-new-page{
+  .user-form{
+    float: left;
+    margin-bottom: 2rem;
+    width: 800px;
+    .form-input{
+      width: 80%;
+    }
+    .form-button{
+      margin-right: 2rem;
+    }
+    .form-textarea{
+      width: 80%;
+    }
+  }
+}
+
+
+.admin-tag-a{
+  margin-bottom: 1rem;
+  a{
+    margin-right: 2rem;
+  }
+}
+
+.admin-option-tag-a{
+  a{
+    margin-right: 0.5rem;
+  }
+}
+
+.radio-event-style{
+  width: 600px;
+}
+
+.in-radio-input{
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+// 后台功能索引页（AdminIndexPage.coffee）
+.admin-index{
+  padding: 30px;
+  background-color: #FFFFFF;
+  .card-row{
+    .card-col{
+      margin-right: 16px;
+      margin-top: 16px;
+      background-color: #EBEBEB;
+      height: 166px;
+      text-align: center;
+      border-style: groove;
+    }
+  }
+}

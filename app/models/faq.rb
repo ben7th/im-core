@@ -10,7 +10,7 @@ class Faq
   has_and_belongs_to_many :tags
   has_and_belongs_to_many :references
 
-
+  validates :question, :answer, presence: true
 
   def tags_name=(ary)
     @tags_name = ary 
@@ -33,13 +33,21 @@ class Faq
       id: self.id.to_s,
       question: self.question,
       answer: self.answer,
-      references: self.reference_ids.map{ |r|
-        Reference.find(r).name
-      }.join(","),
+      references: self.references.map{ |ref|
+        ref.simple_controller_data
+      },
 
-      tags: self.tag_ids.map{ |t|
-        Tag.find(t).name
-      }.join(",")
+      tags: self.tags.map{ |tag|
+        tag.simple_controller_data
+      },
+    }
+  end
+
+  def simple_controller_data
+    {
+      id: self.id.to_s,
+      question: self.question,
+      answer: self.answer,
     }
   end
 end

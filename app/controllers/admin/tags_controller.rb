@@ -11,8 +11,8 @@ class Admin::TagsController < ApplicationController
     @component_name = 'EditPage'
     @component_data = {
       tags: tag.controller_data,
-      faqs: Faq.all.map{|faq| faq.controller_data},
-      references: Reference.all.map{|tag| tag.controller_data},
+      faqs: Faq.all.map{|faq| faq.simple_controller_data},
+      references: Reference.all.map{|tag| tag.simple_controller_data},
       submit_url: admin_tag_path(tag),
       cancel_url: admin_tags_path,
     }
@@ -20,8 +20,8 @@ class Admin::TagsController < ApplicationController
 
   def update
     tag = Tag.find(params[:id])
-    tag.change_faqs(params[:Tag][:faq_ids])
-    tag.change_refs(params[:Tag][:reference_ids])
+    tag.change_faqs(params[:Tag][:faq_ids] ||= [])
+    tag.change_refs(params[:Tag][:reference_ids] ||= [])
     tag.update(name: params[:Tag][:name])
     if tag.save
       redirect_to admin_tags_path

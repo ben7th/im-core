@@ -1,0 +1,222 @@
+{
+  "question": [{
+    "kind": "single_choice",
+    "content": "全行授权工作的归口管理部门是（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "总行法律事务部"
+      }, {
+        "item": "B",
+        "text": "总行人力资源部"
+      }, {
+        "item": "C",
+        "text": "总行信贷管理部"
+      }, {
+        "item": "D",
+        "text": "总行内控合规部"
+      }],
+      "correct": "A"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "行长授权分为基本授权和（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "一般授权"
+      }, {
+        "item": "B",
+        "text": "特别授权"
+      }, {
+        "item": "C",
+        "text": "普通授权"
+      }, {
+        "item": "D", 
+        "text": "临时授权"
+      }],
+      "correct": "B"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "特别授权的有效期自授权人签章之日起生效，至授权事项办理完结后终止，最长期限不得超过（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "六个月"
+      }, {
+        "item": "B",
+        "text": "一年"
+      }, {
+        "item": "C",
+        "text": "两年"
+      }, {
+        "item": "D", 
+        "text": "三年"
+      }],
+      "correct": "B"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "行长授权中授权人特指（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "建设银行行长"
+      }, {
+        "item": "B",
+        "text": "建设银行一级分行行长"
+      }, {
+        "item": "C",
+        "text": "建设银行二级分行行长"
+      }, {
+        "item": "D", 
+        "text": "建设银行支行行长"
+      }],
+      "correct": "A"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "基本授权的有效期原则上为（  ），根据工作需要可延期至新的授权生效时止",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "一年"
+      }, {
+        "item": "B",
+        "text": "两年"
+      }, {
+        "item": "C",
+        "text": "三年"
+      }, {
+        "item": "D", 
+        "text": "四年"
+      }],
+      "correct": "B"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "以下关于基本授权的说法，错误的是（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "基本授权是指授权人在董事会授权和法定经营范围内（转授权人在其权限范围内）就重要经营及管理事项所进行的授权（转授权）"
+      }, {
+        "item": "B",
+        "text": "基本授权的有效期原则上是两年"
+      }, {
+        "item": "C",
+        "text": "转授权和授权变更的有效期应当与基本授权的有效期一致"
+      }, {
+        "item": "D", 
+        "text": "授权变更无需通过“授权变更通知”的形式"
+      }],
+      "correct": "D"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "以下关于特殊授权的说法，错误的是（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "特别授权是指授权人在董事会授权和法定经营范围内对基本授权以外某一特定事项向被授权人所进行的授权"
+      }, {
+        "item": "B",
+        "text": "特别授权的权限由被授权人本人行使，原则上不得转授权，但特别授权时注明允许转授权的例外"
+      }, {
+        "item": "C",
+        "text": "除授权人特别授权外，其他任何被授权人不得进行特别授权"
+      }, {
+        "item": "D", 
+        "text": "特别授权的有效期自授权人签章之日起有效，至授权事项办理完结终止，最长期限不得超过两年"
+      }],
+      "correct": "D"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "授权分为公司治理层面授权和（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "行长授权"
+      }, {
+        "item": "B",
+        "text": "基本授权"
+      }, {
+        "item": "C",
+        "text": "特别授权"
+      }, {
+        "item": "D", 
+        "text": "经营管理层面授权"
+      }],
+      "correct": "D"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "授权人在董事会授权和法定经营范围内（转授权人在其权限范围内）就重要经营及管理事项进行的授权（转授权）指的是（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "基本授权"
+      }, {
+        "item": "B",
+        "text": "特别授权"
+      }, {
+        "item": "C",
+        "text": "行长授权"
+      }, {
+        "item": "D", 
+        "text": "一般授权"
+      }],
+      "correct": "A"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "授权人在董事会授权和法定经营范围内对基本授权以外某一特定事项向被授权人所进行的授权指的是（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "行长授权"
+      }, {
+        "item": "B",
+        "text": "转授权"
+      }, {
+        "item": "C",
+        "text": "特别授权"
+      }, {
+        "item": "D", 
+        "text": "一般授权"
+      }],
+      "correct": "C"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "关于授权书的保密和公开，以下说法错误的是（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "基本授权书涉及建设银行商业秘密，各级机构应做好保密工作，原则上不得将基本授权书对外公开"
+      }, {
+        "item": "B",
+        "text": "应监管机构、行政主管部门、外部审计等要求，可视情况提供全部或部分基本授权书内容"
+      }, {
+        "item": "C",
+        "text": "根据经营管理需要，如确需要向客户证明授权权限时，应将无关内容隐去，只提供相关内容或以授权证明的形式提供"
+      }, {
+        "item": "D", 
+        "text": "特别授权书不能直接用于对外出具"
+      }],
+      "correct": "D"
+    }
+  }]
+}

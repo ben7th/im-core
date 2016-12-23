@@ -1,6 +1,7 @@
 #= require libs
 #= require react-adapter
 #= require antd-adapter
+#= require file_part_upload/uploader 
 
 # utils
 require 'utils/_index'
@@ -9,6 +10,9 @@ require 'utils/_index'
 require 'layouts/_index'
 
 # -----------------------------
+
+
+
 
 # app components
 window.AppComponents = {}
@@ -24,10 +28,10 @@ register require 'app/OrganizationsTreesPage'
 register require 'app/OrganizationTreePage'
 register require 'app/OrganizationNodeShow'
 
-register require 'app/organization/ListPage'
-register require 'app/organization/TreeShowPage'
+register require 'app/admin/organization/ListPage'
+register require 'app/admin/organization/TreeShowPage'
 
-register (require 'app/organization/CreateUpdatePage'), 'CreateUpdatePage'
+register (require 'app/admin/organization/CreateUpdatePage'), 'CreateUpdatePage'
 
 # chatroom
 register require 'app/chat/ChatCharAvatar'
@@ -41,13 +45,28 @@ register require 'app/admin/UsersIndexPage'
 register (require 'app/admin/UsersNewEditPage'), 'UsersNewEditPage'
 
 # FAQ
-register (require 'app/faq/NewAndEditPage'), 'NewAndEditPage'
-register require 'app/tag/TagsIndexPage'
+register (require 'app/admin/faq/NewAndEditPage'), 'NewAndEditPage'
+register require 'app/admin/faq/FaqsIndexPage'
 
 # Reference(参考资料)
-register (require 'app/reference/RefNewEditPage'), 'RefNewEditPage'
-register require 'app/reference/ReferencesIndexPage'
+register (require 'app/admin/reference/RefNewEditPage'), 'RefNewEditPage'
+register require 'app/admin/reference/ReferencesIndexPage'
 
 # 标签
-register (require 'app/tag/EditPage'), 'EditPage'
-register require 'app/faq/FaqsIndexPage'
+register (require 'app/admin/tag/EditPage'), 'EditPage'
+register require 'app/admin/tag/TagsIndexPage'
+
+
+#admin/index
+register require 'app/admin/AdminIndexPage'
+
+# 测试题管理  
+register require 'app/admin/question/QuestionIndexPage'
+register (require 'app/admin/question/SingleEditPage'), 'SingleEditPage'
+register (require 'app/admin/question/MultiEditPage'), 'MultiEditPage'
+register (require 'app/admin/question/BoolEditPage'), 'BoolEditPage'
+
+# 保存文件
+register require 'app/admin/save_file/UploadPage'
+register require 'app/admin/save_file/IndexSaveFilePage'
+register (require 'app/admin/save_file/EditSaveFilePage'), 'EditSaveFilePage'

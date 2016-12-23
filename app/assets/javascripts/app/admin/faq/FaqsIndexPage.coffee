@@ -23,7 +23,7 @@ module.exports = FaqsIndexPage = React.createClass
         title: "操作"
         dataIndex: "id"
         render: (record) =>
-          <div>
+          <div className="admin-option-tag-a">
             <a className='ant-btn ant-btn-primary' href="/admin/faqs/#{record}/edit">
               编辑
             </a>
@@ -33,10 +33,29 @@ module.exports = FaqsIndexPage = React.createClass
           </div>
       }
     ]
-    data = @props.faqs
+    data = []
+    for i in @props.faqs
+      ref_s = ''
+      tag_s = ''
+      for j in i.references
+        ref_s += "#{j.name},"
+
+      for k in i.tags
+        tag_s += "#{k.name},"
+
+      data.push({
+        question: i.question,
+        answer: i.answer,
+        references: ref_s.substring(0, ref_s.length-1),
+        tags: tag_s.substring(0, tag_s.length-1),
+        id: i.id
+      })
+    
       
     <div className='sample-faqs-table'>
-      <a className='ant-btn ant-btn-primary' href={@props.new_url}>新增 FAQ</a>
+      <div className="admin-tag-a">
+        <a className='ant-btn ant-btn-primary' href={@props.new_url}>新增 FAQ</a>
+      </div>
       <Table columns={columns} dataSource={data} pagination={false} size='small' />
     </div>
 

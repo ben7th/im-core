@@ -1,0 +1,47 @@
+{
+  "question": [{
+    "kind": "bool",
+    "content": "授权分为三个层面：公司治理层面授权、经营管理层面授权和转型规划层面",
+    "answer": false
+  },{
+    "kind": "bool",
+    "content": "公司治理层面授权是指股东大会对董事会的授权和董事会对行长的授权",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "经营管理层面授权是指行长在董事会授权范围内，就重要经营管理事项对总行本部高级管理人员、相关部门、境内外分行的授权",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "行长授权分为业务管理授权和人事管理授权",
+    "answer": false
+  },{
+    "kind": "bool",
+    "content": "特别授权是指授权人在董事会授权和法定经营范围内（转授权人在其权限范围内）就重要经营及管理事项所进行的授权（转授权）",
+    "answer": false
+  },{
+    "kind": "bool",
+    "content": "基本授权变更是指授权人（转授权人）根据经营管理需要对被授权人的权限做出调整",
+    "answer": true
+  },{
+    "kind": "bool",
+    "content": "基本授权是指授权人在董事会授权和法定经营范围内对基本授权以外某一特定事项向被授权人所进行的授权",
+    "answer": false
+  },{
+    "kind": "bool",
+    "content": "授权变更无需采用“授权变更通知”的形式",
+    "answer": false
+  },{
+    "kind": "bool",
+    "content": "特别授权书不能直接用于对外出具",
+    "answer": false
+  },{
+    "kind": "bool",
+    "content": "特别授权书涉及建设银行商业秘密，各级机构应做好保密工作，原则上不得将基本授权书对外公开",
+    "answer": false
+  },{
+    "kind": "bool",
+    "content": "被授权人应在授权范围内进行经营管理活动，严禁越权",
+    "answer": true
+  }]
+}

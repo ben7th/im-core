@@ -23,7 +23,7 @@ module.exports = ReferencesIndexPage = React.createClass
         title: "操作"
         dataIndex: "id"
         render: (record) =>
-          <div>
+          <div className="admin-option-tag-a">
             <a className='ant-btn ant-btn-primary' href="/admin/references/#{record}/edit">
               编辑
             </a>
@@ -33,11 +33,24 @@ module.exports = ReferencesIndexPage = React.createClass
           </div>
       }
     ]
+    data = []
+    for ref in @props.references
+      tag_s = ''
+      for t in ref.tags
+        tag_s += "#{t.name},"
 
-    data = @props.references
+      data.push({
+        name: ref.name,
+        describe: ref.describe,
+        kind: ref.kind,
+        tags: tag_s.substring(0, tag_s.length - 1),
+        id: ref.id
+      })
 
     <div className='sample-references-table'>
-      <a className='ant-btn ant-btn-primary' href={@props.new_url}>新增参考资料</a>
+      <div className="admin-tag-a">
+        <a className='ant-btn ant-btn-primary' href={@props.new_url}>新增参考资料</a>
+      </div>
       <Table columns={columns} dataSource={data} pagination={false} size='small' />
     </div>
 

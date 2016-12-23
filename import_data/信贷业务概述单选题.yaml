@@ -1,0 +1,242 @@
+{
+  "question": [{
+    "kind": "single_choice",
+    "content": "短期信贷业务期限为（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "1年以内（含1年）"
+      }, {
+        "item": "B",
+        "text": "1年以内（含1年）"
+      }, {
+        "item": "C",
+        "text": "1年以内（含1年）"
+      }, {
+        "item": "D",
+        "text": "1年以内（含1年）"
+      }],
+      "correct": "A"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "长期信贷业务期限为（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "1年以上"
+      }, {
+        "item": "B",
+        "text": "3年以上"
+      }, {
+        "item": "C",
+        "text": "5年以上"
+      }, {
+        "item": "D", 
+        "text": "10年以上"
+      }],
+      "correct": "C"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "以下不属于表外信贷业务的是（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "商业承兑汇票"
+      }, {
+        "item": "B",
+        "text": "保证"
+      }, {
+        "item": "C",
+        "text": "信用证"
+      }, {
+        "item": "D", 
+        "text": "商业汇票贴现"
+      }],
+      "correct": "D"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "信贷是银行利用自身实力和信誉为客户提供资金融通或代客户承担债务，并以客户支付利息、费用和偿还本金或（  ）为条件的一种经营行为",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "承担相应债权"
+      }, {
+        "item": "B",
+        "text": "最终承担债务 "
+      }, {
+        "item": "C",
+        "text": "承担相应义务"
+      }, {
+        "item": "D", 
+        "text": "最终承担债权"
+      }],
+      "correct": "D"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "信贷业务一般包括以下六个基本要素：对象、金额、期限、价格、（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "用途、方式"
+      }, {
+        "item": "B",
+        "text": "用途、条件 "
+      }, {
+        "item": "C",
+        "text": "用途、担保"
+      }, {
+        "item": "D", 
+        "text": "方式、担保"
+      }],
+      "correct": "C"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "信贷业务按期限划分，可分为短期信贷业务、中期信贷业务和长期信贷业务。中期期限是（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "1年到5年之间"
+      }, {
+        "item": "B",
+        "text": "1（含1年）年到5年之间 "
+      }, {
+        "item": "C",
+        "text": "1年到5年之间（含5年）"
+      }, {
+        "item": "D", 
+        "text": "1年（含1年）到5年之间（含5年）"
+      }],
+      "correct": "C"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "按组织形式划分，信贷业务可以分为普通贷款、联合贷款和（  ）三种形式",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "委托贷款"
+      }, {
+        "item": "B",
+        "text": "银团贷款 "
+      }, {
+        "item": "C",
+        "text": "境外筹资转贷款"
+      }, {
+        "item": "D", 
+        "text": "固定资产贷款"
+      }],
+      "correct": "B"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "绿色信贷包括对绿色经济、低碳经济、循环经济的支持，防范（  ），提升自身的环境和社会表现等基本内容",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "环境和社会风险"
+      }, {
+        "item": "B",
+        "text": "金融和社会风险 "
+      }, {
+        "item": "C",
+        "text": "金融和环境风险"
+      }, {
+        "item": "D", 
+        "text": "环境和经济风险"
+      }],
+      "correct": "A"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "银行信贷经营的首要理念是（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "审慎经营理念"
+      }, {
+        "item": "B",
+        "text": "以客户为中心理念 "
+      }, {
+        "item": "C",
+        "text": "诚实守信理念"
+      }, {
+        "item": "D", 
+        "text": "绿色信贷理念"
+      }],
+      "correct": "C"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "银行在经营信贷业务过程中，要保证信贷资金“保值“，避免承受过高风险和造成损失，体现了办理信贷业务必须遵循的原则是（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "流动性"
+      }, {
+        "item": "B",
+        "text": "安全性 "
+      }, {
+        "item": "C",
+        "text": "效益性"
+      }, {
+        "item": "D", 
+        "text": "合法性"
+      }],
+      "correct": "B"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "银行在经营信贷业务过程中能按预定期限回收信贷资金，或能在没有损失的状态下迅速变现资金的能力，体现了办理信贷业务必须遵循的原则是（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "流动性"
+      }, {
+        "item": "B",
+        "text": "安全性 "
+      }, {
+        "item": "C",
+        "text": "效益性"
+      }, {
+        "item": "D", 
+        "text": "合法性"
+      }],
+      "correct": "A"
+    }
+  },
+  {
+    "kind": "single_choice",
+    "content": "银行在经营活动中应追求最大效益，这体现在办理信贷业务时必须遵循的原则是（  ）",
+    "answer": {
+      "choices": [{
+        "item": "A",
+        "text": "流动性"
+      }, {
+        "item": "B",
+        "text": "安全性 "
+      }, {
+        "item": "C",
+        "text": "效益性"
+      }, {
+        "item": "D", 
+        "text": "合法性"
+      }],
+      "correct": "C"
+    }
+  }]
+}
